@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|  
   s.name         = "DFCourier"
-  s.version      = "1.0.3"
+  s.version      = "1.0.5"
   s.summary      = "A message sending proxy switcher."
   s.description  = <<-DESC
                     By implementing DFCourierDelegate protocol, there is an easy way to assign whose method signature will be used and which object the method will be forwarded to for each selector.
