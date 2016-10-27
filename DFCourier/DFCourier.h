@@ -39,8 +39,18 @@ typedef NS_OPTIONS(NSUInteger, DFCourierProxyOption) {
     DFCourierProxyOptionAlways = 1 << 4,
 };
 
+/**
+ Proxy 应实现这一协议。
+ */
 @protocol DFCourierProxy <NSObject>
 
+/**
+ 代理方法，详细解释参考 DFCourierProxyOption。
+
+ @param aSelector 可以使用 NSStringFromSelector() 函数进行比较。
+
+ @return 默认应返回 DFCourierProxyOptionNone。
+ */
 - (DFCourierProxyOption)proxyOptionForSelector:(SEL)aSelector;
 
 @end
@@ -62,11 +72,29 @@ typedef NS_OPTIONS(NSUInteger, DFCourierProxyOption) {
  */
 @interface DFCourier : NSObject
 
+/**
+ 原本应接受调用的对象。
+ */
 @property (nonatomic, weak) id target;
+
+/**
+ 方法转发的对象，同时也是 DFCourier 的代理。
+ */
 @property (nonatomic, weak) id proxy;
 
+/**
+ 是否响应 conformsToProtocol: 方法。
+ */
 @property (nonatomic) BOOL isProtocolForwarding;
+
+/**
+ 是否响应 isKindOfClass: 方法。
+ */
 @property (nonatomic) BOOL isInheritanceForwarding;
+
+/**
+ 是否转发 isMemberOfClass: 方法。
+ */
 @property (nonatomic) BOOL isClassForwarding;
 
 @end
