@@ -13,6 +13,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 /**
  *  @author fangqiuming, 16-08-19 15:08:48
  *
@@ -29,6 +30,13 @@
  *  Reserve：如获取 target 方法签名失败，从 proxy 获取，并发送消息给 proxy；
  *
  *  Always：使用 proxy 的方法签名，不发送消息给 target。
+ 
+ - DFCourierProxyOptionNone:    Invoke the original method on target.
+ - DFCourierProxyOptionBefore:  Sending a duplicate message to proxy between asking target's method signature and forwarding message to target. The return value from proxy will be abandon.
+ - DFCourierProxyOptionAfter:   Sending a duplicate message to proxy after forwarding message to target. The return value from proxy will be abandon.
+ - DFCourierProxyOptionInstead: Taking target's method signature then forwarding message to proxy.
+ - DFCourierProxyOptionReserve: Taking target's method signature, if failed, asking proxy for it.
+ - DFCourierProxyOptionAlways:  Give the invocation on proxy.
  */
 typedef NS_OPTIONS(NSUInteger, DFCourierProxyOption) {
     DFCourierProxyOptionNone = 0,
