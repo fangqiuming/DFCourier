@@ -1,5 +1,5 @@
 //
-// DFForwardingRule.h
+// DFSorter.h
 // Copyright (c) 2016 FANG QIUMING
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,22 +22,28 @@
 
 #import <Foundation/Foundation.h>
 
+@class DFForwardingRule;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DFForwardingRule : NSObject <NSCopying>
+@interface DFSorter : NSObject
 
-@property (nonatomic, readonly) NSString *selectorString;
-@property (nonatomic, weak) id forwardTo;
-@property (nonatomic, weak, nullable) id standByForwardTo;
-@property (nonatomic, readonly) NSHashTable *advanceCopyTo;
-@property (nonatomic, readonly) NSHashTable *laterCopyTo;
-@property (nonatomic, weak, nullable) id responseFrom;
-@property (nonatomic, weak, nullable) id signedBy;
-@property (nonatomic, nullable) SEL swizzleTo;
+@property (nonatomic) NSInteger services;
+@property (nonatomic, null_resettable) NSMutableSet<Protocol *> *protocols;
 
-- (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithSelectorString:(NSString *)selectorString NS_DESIGNATED_INITIALIZER;
-+ (instancetype)ruleFromSelectorString:(NSString *)selectorString;
++ (nullable id)winnerOf:(SEL)aSelector wei:(nullable id)wei shu:(nullable id)shu wu:(nullable id)wu;
++ (NSInvocation *)duplicateOfInvocation:(NSInvocation *)anInvocation;
+- (void)addRules:(nullable NSSet *)rules;
+- (void)deleteRules:(nullable NSSet *)rules;
+- (void)clearRules;
+- (nullable DFForwardingRule *)ruleWithSelectorString:(NSString *)selectorString;
+- (void)setProtocols:(NSMutableSet<Protocol *> *)Protocols;
+- (NSString *)instanceIdentifier;
+- (BOOL)df_respondsToSelector:(SEL)aSelector;
+- (NSMethodSignature *)df_methodSignatureForSelector:(SEL)aSelector;
+- (void)df_forwardInvocation:(NSInvocation *)anInvocation;
+- (BOOL)df_conformsToProtocol:(Protocol *)aProtocol;
+- (BOOL)df_isEqual:(id)object;
 
 @end
 

@@ -1,5 +1,5 @@
 //
-// DFForwardingRule.h
+// DFPrivate.h
 // Copyright (c) 2016 FANG QIUMING
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,25 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "DFCourier+Private.h"
+#import "DFForwardingRuleSet+Private.h"
+#import "DFSelectorFilter+Private.h"
+#import "DFProtocolFilter+Private.h"
+#import "DFForwardingRule.h"
+#import "DFSorter.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface DFForwardingRule : NSObject <NSCopying>
-
-@property (nonatomic, readonly) NSString *selectorString;
-@property (nonatomic, weak) id forwardTo;
-@property (nonatomic, weak, nullable) id standByForwardTo;
-@property (nonatomic, readonly) NSHashTable *advanceCopyTo;
-@property (nonatomic, readonly) NSHashTable *laterCopyTo;
-@property (nonatomic, weak, nullable) id responseFrom;
-@property (nonatomic, weak, nullable) id signedBy;
-@property (nonatomic, nullable) SEL swizzleTo;
-
-- (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithSelectorString:(NSString *)selectorString NS_DESIGNATED_INITIALIZER;
-+ (instancetype)ruleFromSelectorString:(NSString *)selectorString;
-
-@end
-
-NS_ASSUME_NONNULL_END

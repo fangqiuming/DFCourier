@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F74992DE1DDAF64300B22D6B /* DFCourier.m in Sources */ = {isa = PBXBuildFile; fileRef = F74992A81DDAF39100B22D6B /* DFCourier.m */; };
+		F74992DF1DDAF64300B22D6B /* DFSelectorFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F74992A71DDAF39100B22D6B /* DFSelectorFilter.m */; };
+		F74992E01DDAF64300B22D6B /* DFForwardingRuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F74992AB1DDAF39100B22D6B /* DFForwardingRuleSet.m */; };
+		F74992E11DDAF64300B22D6B /* DFForwardingRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F74992B41DDAF39100B22D6B /* DFForwardingRule.m */; };
+		F74992E21DDAF64300B22D6B /* DFProtocolFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F74992B71DDAF39100B22D6B /* DFProtocolFilter.m */; };
+		F74992E31DDAF64300B22D6B /* DFSorter.m in Sources */ = {isa = PBXBuildFile; fileRef = F74992AD1DDAF39100B22D6B /* DFSorter.m */; };
+		F7D169B81DD967E20060B347 /* DFCourier_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D169B71DD967E20060B347 /* DFCourier_Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F74992A71DDAF39100B22D6B /* DFSelectorFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFSelectorFilter.m; sourceTree = "<group>"; };
+		F74992A81DDAF39100B22D6B /* DFCourier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFCourier.m; sourceTree = "<group>"; };
+		F74992A91DDAF39100B22D6B /* DFSelectorFilter+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DFSelectorFilter+Private.h"; sourceTree = "<group>"; };
+		F74992AA1DDAF39100B22D6B /* DFForwardingRuleSet+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DFForwardingRuleSet+Private.h"; sourceTree = "<group>"; };
+		F74992AB1DDAF39100B22D6B /* DFForwardingRuleSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFForwardingRuleSet.m; sourceTree = "<group>"; };
+		F74992AC1DDAF39100B22D6B /* DFSelectorFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFSelectorFilter.h; sourceTree = "<group>"; };
+		F74992AD1DDAF39100B22D6B /* DFSorter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFSorter.m; sourceTree = "<group>"; };
+		F74992AE1DDAF39100B22D6B /* DFPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPrivate.h; sourceTree = "<group>"; };
+		F74992AF1DDAF39100B22D6B /* DFSorter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFSorter.h; sourceTree = "<group>"; };
+		F74992B01DDAF39100B22D6B /* DFCourier+Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DFCourier+Interface.h"; sourceTree = "<group>"; };
+		F74992B11DDAF39100B22D6B /* DFCourier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFCourier.h; sourceTree = "<group>"; };
+		F74992B21DDAF39100B22D6B /* DFCourier+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DFCourier+Private.h"; sourceTree = "<group>"; };
+		F74992B31DDAF39100B22D6B /* DFForwardingRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFForwardingRule.h; sourceTree = "<group>"; };
+		F74992B41DDAF39100B22D6B /* DFForwardingRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFForwardingRule.m; sourceTree = "<group>"; };
+		F74992B51DDAF39100B22D6B /* DFForwardingRuleSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFForwardingRuleSet.h; sourceTree = "<group>"; };
+		F74992B61DDAF39100B22D6B /* DFProtocolFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFProtocolFilter.h; sourceTree = "<group>"; };
+		F74992B71DDAF39100B22D6B /* DFProtocolFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFProtocolFilter.m; sourceTree = "<group>"; };
+		F74992B81DDAF39100B22D6B /* DFProtocolFilter+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DFProtocolFilter+Private.h"; sourceTree = "<group>"; };
+		F74992C61DDAF54F00B22D6B /* DFCourier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFCourier.h; sourceTree = "<group>"; };
+		F74992C71DDAF54F00B22D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7D169B41DD967E20060B347 /* DFCourier Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DFCourier Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7D169B71DD967E20060B347 /* DFCourier_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFCourier_Tests.m; sourceTree = "<group>"; };
+		F7D169B91DD967E20060B347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7D169B11DD967E20060B347 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F74992A01DDAF37A00B22D6B /* DFCourier */ = {
+			isa = PBXGroup;
+			children = (
+				F74992B11DDAF39100B22D6B /* DFCourier.h */,
+				F74992B01DDAF39100B22D6B /* DFCourier+Interface.h */,
+				F74992B21DDAF39100B22D6B /* DFCourier+Private.h */,
+				F74992A81DDAF39100B22D6B /* DFCourier.m */,
+				F74992AC1DDAF39100B22D6B /* DFSelectorFilter.h */,
+				F74992A91DDAF39100B22D6B /* DFSelectorFilter+Private.h */,
+				F74992A71DDAF39100B22D6B /* DFSelectorFilter.m */,
+				F74992B51DDAF39100B22D6B /* DFForwardingRuleSet.h */,
+				F74992AA1DDAF39100B22D6B /* DFForwardingRuleSet+Private.h */,
+				F74992AB1DDAF39100B22D6B /* DFForwardingRuleSet.m */,
+				F74992B31DDAF39100B22D6B /* DFForwardingRule.h */,
+				F74992B41DDAF39100B22D6B /* DFForwardingRule.m */,
+				F74992B61DDAF39100B22D6B /* DFProtocolFilter.h */,
+				F74992B81DDAF39100B22D6B /* DFProtocolFilter+Private.h */,
+				F74992B71DDAF39100B22D6B /* DFProtocolFilter.m */,
+				F74992AF1DDAF39100B22D6B /* DFSorter.h */,
+				F74992AD1DDAF39100B22D6B /* DFSorter.m */,
+				F74992AE1DDAF39100B22D6B /* DFPrivate.h */,
+			);
+			name = DFCourier;
+			path = ../DFCourier;
+			sourceTree = "<group>";
+		};
+		F74992C51DDAF54F00B22D6B /* DFCourier */ = {
+			isa = PBXGroup;
+			children = (
+				F74992C61DDAF54F00B22D6B /* DFCourier.h */,
+				F74992C71DDAF54F00B22D6B /* Info.plist */,
+			);
+			path = DFCourier;
+			sourceTree = "<group>";
+		};
+		F7D169A61DD967410060B347 = {
+			isa = PBXGroup;
+			children = (
+				F7D169B61DD967E20060B347 /* DFCourier Tests */,
+				F74992A01DDAF37A00B22D6B /* DFCourier */,
+				F74992C51DDAF54F00B22D6B /* DFCourier */,
+				F7D169B51DD967E20060B347 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7D169B51DD967E20060B347 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7D169B41DD967E20060B347 /* DFCourier Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7D169B61DD967E20060B347 /* DFCourier Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F7D169B71DD967E20060B347 /* DFCourier_Tests.m */,
+				F7D169B91DD967E20060B347 /* Info.plist */,
+			);
+			path = "DFCourier Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7D169B31DD967E20060B347 /* DFCourier Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7D169BC1DD967E20060B347 /* Build configuration list for PBXNativeTarget "DFCourier Tests" */;
+			buildPhases = (
+				F7D169B01DD967E20060B347 /* Sources */,
+				F7D169B11DD967E20060B347 /* Frameworks */,
+				F7D169B21DD967E20060B347 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DFCourier Tests";
+			productName = "DFCourier Tests";
+			productReference = F7D169B41DD967E20060B347 /* DFCourier Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7D169A71DD967410060B347 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				TargetAttributes = {
+					F7D169B31DD967E20060B347 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8YRAC7DT22;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F7D169AA1DD967410060B347 /* Build configuration list for PBXProject "DFCourierTests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F7D169A61DD967410060B347;
+			productRefGroup = F7D169B51DD967E20060B347 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7D169B31DD967E20060B347 /* DFCourier Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7D169B21DD967E20060B347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7D169B01DD967E20060B347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7D169B81DD967E20060B347 /* DFCourier_Tests.m in Sources */,
+				F74992E11DDAF64300B22D6B /* DFForwardingRule.m in Sources */,
+				F74992E31DDAF64300B22D6B /* DFSorter.m in Sources */,
+				F74992E01DDAF64300B22D6B /* DFForwardingRuleSet.m in Sources */,
+				F74992DF1DDAF64300B22D6B /* DFSelectorFilter.m in Sources */,
+				F74992DE1DDAF64300B22D6B /* DFCourier.m in Sources */,
+				F74992E21DDAF64300B22D6B /* DFProtocolFilter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F7D169AB1DD967410060B347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		F7D169AC1DD967410060B347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		F7D169BA1DD967E20060B347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8YRAC7DT22;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "DFCourier Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fangqiuming.DFCourier-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WARNING_CFLAGS = (
+					"-Wextra",
+					"-Wall",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		F7D169BB1DD967E20060B347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8YRAC7DT22;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "DFCourier Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fangqiuming.DFCourier-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7D169AA1DD967410060B347 /* Build configuration list for PBXProject "DFCourierTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7D169AB1DD967410060B347 /* Debug */,
+				F7D169AC1DD967410060B347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7D169BC1DD967E20060B347 /* Build configuration list for PBXNativeTarget "DFCourier Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7D169BA1DD967E20060B347 /* Debug */,
+				F7D169BB1DD967E20060B347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7D169A71DD967410060B347 /* Project object */;
+}

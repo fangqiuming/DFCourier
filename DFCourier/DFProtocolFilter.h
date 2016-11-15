@@ -1,5 +1,5 @@
 //
-// DFForwardingRule.h
+// DFProtocolFilter.h
 // Copyright (c) 2016 FANG QIUMING
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,23 +22,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class DFProtocolFilter;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DFForwardingRule : NSObject <NSCopying>
+@protocol DFProtocolFilter
+- (DFProtocolFilter * (^)(Protocol *))df_protocol;
+- (DFProtocolFilter * (^)(NSArray<Protocol *> *))df_protocols;
+- (DFProtocolFilter *)and;
+- (DFProtocolFilter *)with;
+@end
 
-@property (nonatomic, readonly) NSString *selectorString;
-@property (nonatomic, weak) id forwardTo;
-@property (nonatomic, weak, nullable) id standByForwardTo;
-@property (nonatomic, readonly) NSHashTable *advanceCopyTo;
-@property (nonatomic, readonly) NSHashTable *laterCopyTo;
-@property (nonatomic, weak, nullable) id responseFrom;
-@property (nonatomic, weak, nullable) id signedBy;
-@property (nonatomic, nullable) SEL swizzleTo;
-
-- (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithSelectorString:(NSString *)selectorString NS_DESIGNATED_INITIALIZER;
-+ (instancetype)ruleFromSelectorString:(NSString *)selectorString;
-
+@interface DFProtocolFilter : NSObject <DFProtocolFilter>
 @end
 
 NS_ASSUME_NONNULL_END

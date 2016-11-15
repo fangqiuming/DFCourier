@@ -1,0 +1,114 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		F77FA3EC1DDAABB600F38168 /* DFPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFPrivate.h; sourceTree = "<group>"; };
+		F77FA3ED1DDAABC100F38168 /* DFCourier+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DFCourier+Private.h"; sourceTree = "<group>"; };
+		F77FA3EE1DDAABDA00F38168 /* DFProtocolFilter+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DFProtocolFilter+Private.h"; sourceTree = "<group>"; };
+		F7D169991DD966D30060B347 /* DFCourier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFCourier.m; sourceTree = "<group>"; };
+		F7D1699A1DD966D30060B347 /* DFForwardingRuleSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFForwardingRuleSet.m; sourceTree = "<group>"; };
+		F7D1699B1DD966D30060B347 /* DFSelectorFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFSelectorFilter.m; sourceTree = "<group>"; };
+		F7D1699C1DD966D30060B347 /* DFProtocolFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFProtocolFilter.m; sourceTree = "<group>"; };
+		F7D1699D1DD966D30060B347 /* DFProtocolFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFProtocolFilter.h; sourceTree = "<group>"; };
+		F7D1699E1DD966D30060B347 /* DFSelectorFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFSelectorFilter.h; sourceTree = "<group>"; };
+		F7D1699F1DD966D30060B347 /* DFForwardingRuleSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFForwardingRuleSet.h; sourceTree = "<group>"; };
+		F7D169A01DD966D30060B347 /* DFCourier+Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DFCourier+Interface.h"; sourceTree = "<group>"; };
+		F7D169A11DD966D30060B347 /* DFForwardingRuleSet+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DFForwardingRuleSet+Private.h"; sourceTree = "<group>"; };
+		F7D169A21DD966D30060B347 /* DFSelectorFilter+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DFSelectorFilter+Private.h"; sourceTree = "<group>"; };
+		F7D169A31DD966D30060B347 /* DFCourier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFCourier.h; sourceTree = "<group>"; };
+		F7D169A41DD966D30060B347 /* DFForwardingRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFForwardingRule.h; sourceTree = "<group>"; };
+		F7D169A51DD966D30060B347 /* DFForwardingRule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFForwardingRule.m; sourceTree = "<group>"; };
+		F7D169D61DD9B9E10060B347 /* DFSorter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFSorter.h; sourceTree = "<group>"; };
+		F7D169D71DD9B9E10060B347 /* DFSorter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFSorter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		F7D169841DD9657C0060B347 = {
+			isa = PBXGroup;
+			children = (
+				F7D169981DD966B90060B347 /* DFCourier */,
+			);
+			sourceTree = "<group>";
+		};
+		F7D169981DD966B90060B347 /* DFCourier */ = {
+			isa = PBXGroup;
+			children = (
+				F7D169A31DD966D30060B347 /* DFCourier.h */,
+				F7D169A01DD966D30060B347 /* DFCourier+Interface.h */,
+				F77FA3ED1DDAABC100F38168 /* DFCourier+Private.h */,
+				F7D169991DD966D30060B347 /* DFCourier.m */,
+				F7D1699E1DD966D30060B347 /* DFSelectorFilter.h */,
+				F7D169A21DD966D30060B347 /* DFSelectorFilter+Private.h */,
+				F7D1699B1DD966D30060B347 /* DFSelectorFilter.m */,
+				F7D1699F1DD966D30060B347 /* DFForwardingRuleSet.h */,
+				F7D169A11DD966D30060B347 /* DFForwardingRuleSet+Private.h */,
+				F7D1699A1DD966D30060B347 /* DFForwardingRuleSet.m */,
+				F7D169A41DD966D30060B347 /* DFForwardingRule.h */,
+				F7D169A51DD966D30060B347 /* DFForwardingRule.m */,
+				F7D1699D1DD966D30060B347 /* DFProtocolFilter.h */,
+				F77FA3EE1DDAABDA00F38168 /* DFProtocolFilter+Private.h */,
+				F7D1699C1DD966D30060B347 /* DFProtocolFilter.m */,
+				F7D169D61DD9B9E10060B347 /* DFSorter.h */,
+				F7D169D71DD9B9E10060B347 /* DFSorter.m */,
+				F77FA3EC1DDAABB600F38168 /* DFPrivate.h */,
+			);
+			path = DFCourier;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		F7D169851DD9657C0060B347 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+			};
+			buildConfigurationList = F7D169881DD9657C0060B347 /* Build configuration list for PBXProject "DFCourier" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F7D169841DD9657C0060B347;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		F7D169891DD9657C0060B347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		F7D1698A1DD9657C0060B347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7D169881DD9657C0060B347 /* Build configuration list for PBXProject "DFCourier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7D169891DD9657C0060B347 /* Debug */,
+				F7D1698A1DD9657C0060B347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7D169851DD9657C0060B347 /* Project object */;
+}

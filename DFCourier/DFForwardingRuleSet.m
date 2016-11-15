@@ -1,14 +1,27 @@
 //
-//  DFForwardingRuleSet.m
-//  Workbook
+// DFForwardingRuleSet.m
+// Copyright (c) 2016 FANG QIUMING
 //
-//  Created by 方秋鸣 on 2016/11/1.
-//  Copyright © 2016年 方秋鸣. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
-#import "DFForwardingRule.h"
-#import "DFForwardingRuleSet.h"
 #import "DFForwardingRuleSet+Private.h"
+#import "DFForwardingRule.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,11 +31,11 @@ NSString * const df_kDefaultSelectorString = @"";
 
 #pragma mark - Semantic properties
 
-- (instancetype)and {
+- (DFForwardingRuleSet *)and {
     return self;
 }
 
-- (instancetype)with {
+- (DFForwardingRuleSet *)with {
     return self;
 }
 
@@ -37,7 +50,7 @@ NSString * const df_kDefaultSelectorString = @"";
     return _rules;
 }
 
-- (instancetype)addSelectorStrings:(NSArray <NSString *> *)selectorStrings
+- (DFForwardingRuleSet *)addSelectorStrings:(NSArray <NSString *> *)selectorStrings
 {
     for (NSString *string in selectorStrings) {
         DFForwardingRule *rule = [DFForwardingRule ruleFromSelectorString:string];
@@ -48,44 +61,18 @@ NSString * const df_kDefaultSelectorString = @"";
     return self;
 }
 
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(SEL))df_selector
-{
-    return ^DFForwardingRuleSet * (SEL aSelector) {
-        return [self addSelectorStrings:@[NSStringFromSelector(aSelector)]];
-    };
-}
-
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(NSString *))df_selectorFromString
-{
-    return ^DFForwardingRuleSet * (NSString *aSelectorString) {
-        return [self addSelectorStrings:@[aSelectorString]];
-    };
-}
-
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(NSArray <NSString *> *))df_selectorsFromStrings
-{
-    return ^DFForwardingRuleSet * (NSArray <NSString *> *selectorStrings) {
-        return [self addSelectorStrings:selectorStrings];
-    };
-}
-
-- (DFForwardingRuleSet<DFForwardingRuleSet> *)df_makeDefault
-{
-    [self addSelectorStrings:@[df_kDefaultSelectorString]];
-    return self;
-}
-
 #pragma mark - Config rules
 
-- (instancetype)configRules:(void (^)(DFForwardingRule *rule))config
+- (DFForwardingRuleSet *)configRules:(void (^)(DFForwardingRule *rule))config
 {
     [self.rules enumerateObjectsUsingBlock:^(DFForwardingRule * _Nonnull obj, BOOL * _Nonnull stop) {
+        *stop = NO;
         config(obj);
     }];
     return self;
 }
 
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(id))df_forwardTo
+- (DFForwardingRuleSet * (^)(id))df_forwardTo
 {
     return ^DFForwardingRuleSet * (id object) {
         return [self configRules:^(DFForwardingRule *rule) {
@@ -94,7 +81,7 @@ NSString * const df_kDefaultSelectorString = @"";
     };
 }
 
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(id))df_standByForwardTo
+- (DFForwardingRuleSet * (^)(id))df_standByForwardTo
 {
     return ^DFForwardingRuleSet * (id object) {
         return [self configRules:^(DFForwardingRule *rule) {
@@ -103,7 +90,7 @@ NSString * const df_kDefaultSelectorString = @"";
     };
 }
 
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(id))df_advanceCopyTo
+- (DFForwardingRuleSet * (^)(id))df_advanceCopyTo
 {
     return ^DFForwardingRuleSet * (id object) {
         return [self configRules:^(DFForwardingRule *rule) {
@@ -112,7 +99,7 @@ NSString * const df_kDefaultSelectorString = @"";
     };
 }
 
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(NSArray *))df_advanceCopyToList
+- (DFForwardingRuleSet * (^)(NSArray *))df_advanceCopyToList
 {
     return ^DFForwardingRuleSet * (NSArray *objects) {
         return [self configRules:^(DFForwardingRule *rule) {
@@ -123,7 +110,7 @@ NSString * const df_kDefaultSelectorString = @"";
     };
 }
 
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(id))df_laterCopyTo
+- (DFForwardingRuleSet * (^)(id))df_laterCopyTo
 {
     return ^DFForwardingRuleSet * (id object) {
         return [self configRules:^(DFForwardingRule *rule) {
@@ -132,7 +119,7 @@ NSString * const df_kDefaultSelectorString = @"";
     };
 }
 
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(NSArray *))df_laterCopyToList
+- (DFForwardingRuleSet * (^)(NSArray *))df_laterCopyToList
 {
     return ^DFForwardingRuleSet * (NSArray *objects) {
         return [self configRules:^(DFForwardingRule *rule) {
@@ -143,7 +130,7 @@ NSString * const df_kDefaultSelectorString = @"";
     };
 }
 
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(id))df_responseFrom
+- (DFForwardingRuleSet * (^)(id))df_responseFrom
 {
     return ^DFForwardingRuleSet * (id object) {
         return [self configRules:^(DFForwardingRule *rule) {
@@ -152,7 +139,7 @@ NSString * const df_kDefaultSelectorString = @"";
     };
 }
 
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(id))df_signedBy
+- (DFForwardingRuleSet * (^)(id))df_signedBy
 {
     return ^DFForwardingRuleSet * (id object) {
         return [self configRules:^(DFForwardingRule *rule) {
@@ -161,7 +148,7 @@ NSString * const df_kDefaultSelectorString = @"";
     };
 }
 
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(SEL))df_swizzleToSelector
+- (DFForwardingRuleSet * (^)(SEL))df_swizzleToSelector
 {
     return ^DFForwardingRuleSet * (SEL aSelector) {
         return [self configRules:^(DFForwardingRule *rule) {
@@ -170,13 +157,26 @@ NSString * const df_kDefaultSelectorString = @"";
     };
 }
 
-- (DFForwardingRuleSet<DFForwardingRuleSet> * (^)(NSString *))df_swizzleToSelectorString
+- (DFForwardingRuleSet * (^)(NSString *))df_swizzleToSelectorString
 {
     return ^DFForwardingRuleSet * (NSString *selectorString) {
+        SEL aSelector = NSSelectorFromString(selectorString);
         return [self configRules:^(DFForwardingRule *rule) {
-            rule.swizzleTo = @selector(selectorString);
+            rule.swizzleTo = aSelector;
         }];
     };
+}
+
+#pragma mark - Debug
+
+- (NSString *)selectorStrings
+{
+    NSString *selectorStrings = @"";
+    for (DFForwardingRule *rule in self.rules) {
+        selectorStrings = [selectorStrings stringByAppendingString:
+                           [NSString stringWithFormat:@"[%@]\n", rule.selectorString]];
+    }
+    return selectorStrings;
 }
 
 @end
