@@ -5,6 +5,9 @@
       location = "group:DFCourier.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Example/DFCourier Example.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Tests/DFCourierTests.xcodeproj">
    </FileRef>
 </Workspace>
