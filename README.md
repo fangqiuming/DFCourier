@@ -1,3 +1,5 @@
+**You are reading the documentation for an older version (1.0.5) of DFCourier.**
+
 DFCourier
 ==
 DFCourier is a message sending proxy switcher. 
@@ -31,9 +33,9 @@ DFCourier instance has two objects in its properties: the target and the proxy. 
 
 - `DFCourierProxyOptionNone`: invoke the original method on target;
 
-- `DFCourierProxyOptionBefore`: sending a duplicate message to proxy between asking target's method signature and forwarding message to target. The return value from proxy will be abandon;
+- `DFCourierProxyOptionBefore`: sending a duplicate message to proxy between asking target's method signature and forwarding message to the target. The return value from proxy will be abandon;
 
-- `DFCourierProxyOptionAfter`: sending a duplicate message to proxy after forwarding message to target. The return value from proxy will be abandon;
+- `DFCourierProxyOptionAfter`: sending a duplicate message to proxy after forwarding a message to the target. The return value from proxy will be abandon;
 
 - `DFCourierProxyOptionInstead`: taking target's method signature then forwarding message to proxy;
 

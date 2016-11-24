@@ -1,12 +1,11 @@
 Pod::Spec.new do |s|  
   s.name         = "DFCourier"
-  s.version      = "1.0.5"
-  s.summary      = "A message sending proxy switcher."
+  s.version      = "2.0.0"
+  s.summary      = "Subclass of NSProxy that forwards messages complies with rule tables."
   s.description  = <<-DESC
-                    By implementing DFCourierDelegate protocol, there is an easy way to assign whose method signature will be used and which object the method will be forwarded to for each selector.
-                    DFCourier will ask its delegate for proxy options after receiving a method call.
+                    DFCourier controls message forwarding by customized rule tables, and make it easy to compose rules by supporting method chaining and bulk editing.
                    DESC
-  s.homepage     = "https://bitbucket.org/fangqiuming/dfcourier"
+  s.homepage     = "https://github.com/fangqiuming/DFCourier"
   s.license      = { :type => "MIT", :file => 'LICENSE.md' }
   s.author       = { "fangqiuming" => "fangqiuming@outlook.com" }
   s.platform     = :ios, "7.0"
