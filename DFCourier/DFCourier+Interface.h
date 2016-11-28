@@ -34,6 +34,7 @@ typedef NS_OPTIONS(NSUInteger, DFCourierService) {
 };
 
 @protocol DFCourier
+@optional
 + (DFCourier *)df_courier;
 + (DFCourier *)df_courierWithoutServices:(DFCourierService)services;
 - (void)df_setServices:(DFCourierService)services;
@@ -47,6 +48,7 @@ typedef NS_OPTIONS(NSUInteger, DFCourierService) {
 @end
 
 @protocol DFGuarantor
+@optional
 - (void)df_conformToProtocol:(nullable void (^)(DFProtocolFilter<DFProtocolFilter> *conform))conform;
 @end
 

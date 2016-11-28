@@ -35,17 +35,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)df_init
 {
+    [self df_setServices:DFCourierServiceSelectorRespond
+    | DFCourierServiceProtocolConformance];
     return self;
 }
 
 + (instancetype)df_courier
 {
-    DFCourier *courier = [[self alloc] df_init];
-    if (courier) {
-        [courier df_setServices:DFCourierServiceSelectorRespond
-         | DFCourierServiceProtocolConformance];
-    }
-    return courier;
+    return [[self alloc] df_init];
 }
 
 + (instancetype)df_courierWithoutServices:(DFCourierService)services
